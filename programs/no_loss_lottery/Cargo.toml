@@ -1,0 +1,23 @@
+[package]
+name = "no_loss_lottery"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "no_loss_lottery"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = {version = "0.25.0", features = ["init-if-needed", ]}
+anchor-spl = "0.25.0"
+port-variable-rate-lending-instructions = "0.3.0"
+bytemuck = "1.7.2"
+switchboard-v2 = { version = "^0.1.14", features = ["devnet"] }

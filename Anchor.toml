@@ -1,0 +1,16 @@
+[features]
+seeds = true
+skip-lint = false
+[programs.devnet]
+no_loss_lottery = "GFVxvAzesa7PdEhndi4YZLQGKT7Hdgc6RLyZSCFNaMP6"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/m1/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
